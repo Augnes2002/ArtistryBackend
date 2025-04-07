@@ -9,8 +9,8 @@ const crypto = require('crypto');
 require('dotenv').config();
 
 const razorpay = new Razorpay({
-    key_id:'rzp_test_3MJ0cPqPZC9AWJ',
-    key_secret:'3YCF5Rpic74iI5tBybJYuY60',
+    key_id:,
+    key_secret:,
 });
 
 exports.createOrder = async(req, res) => {
@@ -111,7 +111,7 @@ exports.verifyPayment = async (req, res) => {
         const { razorpayOrderId, razorpayPaymentId, razorpaySignature } = req.body;
         const text = `${razorpayOrderId}|${razorpayPaymentId}`;
         const generatedSignature = crypto
-            .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET || '3YCF5Rpic74iI5tBybJYuY60')
+            .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET || )
             .update(text)
             .digest('hex');
 
