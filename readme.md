@@ -43,6 +43,10 @@
 
 ### Installation
 1. Clone repository:
+2. cd ArtistryBackend
+3. npm i
+4. npm start
+
 
 
 
